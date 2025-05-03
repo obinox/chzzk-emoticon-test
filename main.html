@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="ko" class="theme_dark" style="color-scheme: dark">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>chzzk emote test</title>
+        <meta name="theme-color" content="#000000" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1" />
+        <meta name="google-site-verification" content="OvOP4NQVqAPW2eY_7qUf1IqV7NXhfWlLi_nHStH19Is" />
+        <link rel="shortcut icon" href="https://ssl.pstatic.net/static/nng/glive/icon/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="https://ssl.pstatic.net/static/nng/glive/icon/favicon.png" />
+        <link rel="apple-touch-icon" href="https://ssl.pstatic.net/static/nng/glive/icon/favicon.png" />
+        <link href="https://ssl.pstatic.net/static/nng/glive/resource/p/static/css/main.69d27890.css" rel="stylesheet" />
+        <script>
+            const emote = (s) => {
+                return `<button type="button" class="live_chatting_message_button__WY3rb"><img alt="" src="${s}" /></button>`;
+            };
+            window.onload = () => {
+                document.querySelectorAll("span.live_chatting_message_text__DyleH").forEach((node, index) => {
+                    node.innerHTML = `우와우와`;
+                });
+                const input = document.getElementById("fileInput");
+                const btn = document.getElementById("send_chat_or_donate");
+                btn.addEventListener("click", () => {
+                    input.click();
+                });
+                input.addEventListener("change", function () {
+                    const files = Array.from(input.files).slice(0, 10);
+                    const spans = [];
+                    document.querySelectorAll("span.live_chatting_message_text__DyleH").forEach((node, index) => {
+                        spans.push(node);
+                    });
+                    const donate = document.querySelectorAll(".live_chatting_donation_message_text__XbDKP")[0];
+                    files.forEach((file, index) => {
+                        console.log(file);
+                        if (!file.type.match("image/png") && !file.type.match("image/gif")) return;
+
+                        const reader = new FileReader();
+
+                        reader.onload = function (e) {
+                            spans[index].innerHTML = `우와` + emote(e.target.result) + emote(e.target.result) + `우와` + emote(e.target.result);
+                            donate.innerHTML += emote(e.target.result);
+                        };
+
+                        reader.readAsDataURL(file);
+                    });
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <noscript> You need to enable JavaScript to run this app.</noscript>
+        <input type="file" id="fileInput" accept=".png, .gif" multiple style="display: none" />
+        <div id="root">
+            <script>
+                !(function () {
+                    try {
+                        var d = document.documentElement,
+                            c = d.classList;
+                        c.remove("theme_dark");
+                        var e = localStorage.getItem("theme");
+                        if ("system" === e || (!e && false)) {
+                            var t = "(prefers-color-scheme: dark)",
+                                m = window.matchMedia(t);
+                            if (m.media !== t || m.matches) {
+                                d.style.colorScheme = "dark";
+                                c.add("theme_dark");
+                            } else {
+                                d.style.colorScheme = "light";
+                                null;
+                            }
+                        } else if (e) {
+                            var x = { dark: "theme_dark" };
+                            c.add(x[e] || "");
+                        } else {
+                            c.add("theme_dark");
+                        }
+                        if (e === "light" || e === "dark" || !e) d.style.colorScheme = e || "dark";
+                    } catch (e) {}
+                })();
+            </script>
+            <div class="chat_container__xogg0">
+                <section class="live_container__Ccraj react-draggable" style="transform: translate(0px, 0px)">
+                    <div class="live_wrapper__BQQRt">
+                        <aside id="aside-chatting" class="live_chatting_container__SvtrD live_chatting_is_popup_chat__JSyy2">
+                            <div class="live_chatting_header_container__k0hTT">
+                                <h2 class="live_chatting_header_title__3y2oK">채팅</h2>
+                                <div class="live_chatting_header_wrapper__GyePF live_chatting_header_menu__Fsqc-">
+                                    <button type="button" class="live_chatting_header_button__t2pa1" aria-haspopup="true" aria-expanded="false" aria-label="더보기 메뉴">
+                                        <svg width="20" height="28" viewBox="0 0 20 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="11.5" y="10.5" width="3" height="3" rx="1.5" transform="rotate(-180 11.5 10.5)" fill="currentColor"></rect>
+                                            <rect x="11.5" y="15.5" width="3" height="3" rx="1.5" transform="rotate(-180 11.5 15.5)" fill="currentColor"></rect>
+                                            <rect x="11.5" y="20.5" width="3" height="3" rx="1.5" transform="rotate(-180 11.5 20.5)" fill="currentColor"></rect>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="live_chatting_ranking_container__RVHvS">
+                                <button type="button" class="live_chatting_ranking_ranking_button__iuv3v" aria-expanded="false">
+                                    <div class="live_chatting_ranking_carousel_container__1vAxr live_chatting_ranking_carousel_is_popup_chat__+u2o+ live_chatting_ranking_carousel_full_rank__pYlSg">
+                                        <div class="live_chatting_ranking_carousel_list__IXBAm">
+                                            <div class="live_chatting_ranking_carousel_item__xKgKe">
+                                                <i class="live_chatting_ranking_carousel_icon_ranking__bQzYx">
+                                                    <span class="blind"> 1등</span>
+                                                </i>
+                                                <div class="live_chatting_ranking_carousel_information__eFy9Q">
+                                                    <span class="live_chatting_ranking_carousel_nickname__905WZ">
+                                                        <span class="name_ellipsis__Hu9B+">
+                                                            <span class="name_text__yQG50"> 턱붕이1</span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="live_chatting_ranking_carousel_money__h8TrW">
+                                                        <i class="live_chatting_ranking_carousel_icon_cheese__O0vAL">
+                                                            <span class="blind"> 치즈</span>
+                                                        </i>
+                                                        <span class="live_chatting_ranking_carousel_number__zs8Tb"> 1,234,000</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="live_chatting_ranking_carousel_item__xKgKe">
+                                                <i class="live_chatting_ranking_carousel_icon_ranking__bQzYx live_chatting_ranking_carousel_second__DA5Oc">
+                                                    <span class="blind"> 2등</span>
+                                                </i>
+                                                <div class="live_chatting_ranking_carousel_information__eFy9Q">
+                                                    <span class="live_chatting_ranking_carousel_nickname__905WZ">
+                                                        <span class="name_ellipsis__Hu9B+">
+                                                            <span class="name_text__yQG50"> 턱붕이2</span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="live_chatting_ranking_carousel_money__h8TrW">
+                                                        <i class="live_chatting_ranking_carousel_icon_cheese__O0vAL">
+                                                            <span class="blind"> 치즈</span>
+                                                        </i>
+                                                        <span class="live_chatting_ranking_carousel_number__zs8Tb"> 789,000</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="live_chatting_ranking_carousel_item__xKgKe">
+                                                <i class="live_chatting_ranking_carousel_icon_ranking__bQzYx live_chatting_ranking_carousel_third__mrBKP">
+                                                    <span class="blind"> 3등</span>
+                                                </i>
+                                                <div class="live_chatting_ranking_carousel_information__eFy9Q">
+                                                    <span class="live_chatting_ranking_carousel_nickname__905WZ">
+                                                        <span class="name_ellipsis__Hu9B+">
+                                                            <span class="name_text__yQG50"> 턱붕이3</span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="live_chatting_ranking_carousel_money__h8TrW">
+                                                        <i class="live_chatting_ranking_carousel_icon_cheese__O0vAL">
+                                                            <span class="blind"> 치즈</span>
+                                                        </i>
+                                                        <span class="live_chatting_ranking_carousel_number__zs8Tb"> 456,000</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                                <div>
+                                    <button type="button" class="live_chatting_ranking_arrow_button__OObNh live_chatting_ranking_previous__koeVf" aria-label="이전">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none" class="live_chatting_ranking_icon__tzVcQ">
+                                            <path d="M7 9L11 13L15 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="live_chatting_ranking_arrow_button__OObNh live_chatting_ranking_next__ibKyj" aria-label="다음">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none" class="live_chatting_ranking_icon__tzVcQ">
+                                            <path d="M7 9L11 13L15 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="live_chatting_list_container__vwsbZ live_chatting_list_exist_fixed_message__2EP21" role="log">
+                                <div class="live_chatting_list_wrapper__a5XTV">
+                                    <div class="live_chatting_list_list_bottom__GS9Ne"></div>
+                                    <div class="live_chatting_list_item__0SGhw live_chatting_list_small_padding__YOtZE">
+                                        <div class="live_chatting_donation_message_container__r01qB live_chatting_donation_message_level0__rgSs0">
+                                            <div class="live_chatting_donation_message_header__O3BVA">
+                                                <button type="button" class="live_chatting_donation_message_profile_button__H1k75" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="live_chatting_username_container__m1-i5 live_chatting_username_is_donation__eXMYs" style="margin-right: 0px">
+                                                        <span class="live_chatting_username_nickname__dDbbj">
+                                                            <span class="">
+                                                                <span class="name_text__yQG50"> 익명의 후원자</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <p class="live_chatting_donation_message_text__XbDKP">테스트입니다.</p>
+                                            <div class="live_chatting_donation_message_bottom__uR1tP">
+                                                <span class="live_chatting_donation_message_money__fE2UC">
+                                                    <i class="live_chatting_donation_message_icon_cheese__yMW63"> </i>
+                                                    1,000</span
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="live_chatting_list_item__0SGhw">
+                                        <div class="live_chatting_message_container__vrI-y">
+                                            <div class="live_chatting_message_chatting_message__7TKns">
+                                                <button type="button" class="live_chatting_message_nickname__UdLXa" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="live_chatting_username_container__m1-i5 live_chatting_username_is_message__jvTvP live_chatting_username_is_ellipsis__5DqoB" style="margin-right: 4px">
+                                                        <span class="live_chatting_username_wrapper__iJpJB">
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/icon/manager.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <span class="live_chatting_username_nickname__dDbbj" style="color: #749ffe">
+                                                            <span class="name_ellipsis__Hu9B+">
+                                                                <span class="name_text__yQG50"> 턱붕이10</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                                <span class="live_chatting_message_text__DyleH" style="color: #749ffe"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="live_chatting_list_item__0SGhw">
+                                        <div class="live_chatting_message_container__vrI-y">
+                                            <div class="live_chatting_message_chatting_message__7TKns">
+                                                <button type="button" class="live_chatting_message_nickname__UdLXa" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="live_chatting_username_container__m1-i5 live_chatting_username_is_message__jvTvP live_chatting_username_is_ellipsis__5DqoB" style="margin-right: 4px">
+                                                        <span class="live_chatting_username_wrapper__iJpJB">
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/icon/2_9m.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/badge/recap_2024.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/icon/cheese01.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <span class="live_chatting_username_nickname__dDbbj" style="color: rgb(175, 113, 181)">
+                                                            <span class="name_ellipsis__Hu9B+">
+                                                                <span class="name_text__yQG50"> 턱붕이9</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                                <span class="live_chatting_message_text__DyleH"> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="live_chatting_list_item__0SGhw">
+                                        <div class="live_chatting_message_container__vrI-y">
+                                            <div class="live_chatting_message_chatting_message__7TKns">
+                                                <button type="button" class="live_chatting_message_nickname__UdLXa" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="live_chatting_username_container__m1-i5 live_chatting_username_is_message__jvTvP live_chatting_username_is_ellipsis__5DqoB" style="margin-right: 4px">
+                                                        <span class="live_chatting_username_wrapper__iJpJB">
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/icon/3m.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/icon/cheese02.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/badge/gift_sub_10.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/badge/cheatkey_1m.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <span class="live_chatting_username_nickname__dDbbj" style="color: rgb(113, 125, 198)">
+                                                            <span class="name_ellipsis__Hu9B+">
+                                                                <span class="name_text__yQG50"> 턱붕이8</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                                <span class="live_chatting_message_text__DyleH"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="live_chatting_list_item__0SGhw">
+                                        <div class="live_chatting_message_container__vrI-y">
+                                            <div class="live_chatting_message_chatting_message__7TKns">
+                                                <button type="button" class="live_chatting_message_nickname__UdLXa" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="live_chatting_username_container__m1-i5 live_chatting_username_is_message__jvTvP live_chatting_username_is_ellipsis__5DqoB" style="margin-right: 4px">
+                                                        <span class="live_chatting_username_wrapper__iJpJB">
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/icon/12m.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <span class="live_chatting_username_nickname__dDbbj" style="color: rgb(131, 197, 214)">
+                                                            <span class="name_ellipsis__Hu9B+">
+                                                                <span class="name_text__yQG50"> 턱붕이7</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                                <span class="live_chatting_message_text__DyleH"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="live_chatting_list_item__0SGhw">
+                                        <div class="live_chatting_message_container__vrI-y">
+                                            <div class="live_chatting_message_chatting_message__7TKns">
+                                                <button type="button" class="live_chatting_message_nickname__UdLXa" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="live_chatting_username_container__m1-i5 live_chatting_username_is_message__jvTvP live_chatting_username_is_ellipsis__5DqoB" style="margin-right: 4px">
+                                                        <span class="live_chatting_username_wrapper__iJpJB">
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/badge/fan_03.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <span class="live_chatting_username_nickname__dDbbj" style="color: rgb(148, 201, 148)">
+                                                            <span class="name_ellipsis__Hu9B+">
+                                                                <span class="name_text__yQG50"> 턱붕이6</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                                <span class="live_chatting_message_text__DyleH"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="live_chatting_list_item__0SGhw">
+                                        <div class="live_chatting_message_container__vrI-y">
+                                            <div class="live_chatting_message_chatting_message__7TKns">
+                                                <button type="button" class="live_chatting_message_nickname__UdLXa" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="live_chatting_username_container__m1-i5 live_chatting_username_is_message__jvTvP live_chatting_username_is_ellipsis__5DqoB" style="margin-right: 4px">
+                                                        <span class="live_chatting_username_wrapper__iJpJB">
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/icon/9m.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <span class="live_chatting_username_nickname__dDbbj" style="color: rgb(234, 163, 95)">
+                                                            <span class="name_ellipsis__Hu9B+">
+                                                                <span class="name_text__yQG50"> 턱붕이5</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                                <span class="live_chatting_message_text__DyleH"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="live_chatting_list_item__0SGhw">
+                                        <div class="live_chatting_message_container__vrI-y">
+                                            <div class="live_chatting_message_chatting_message__7TKns">
+                                                <button type="button" class="live_chatting_message_nickname__UdLXa" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="live_chatting_username_container__m1-i5 live_chatting_username_is_message__jvTvP live_chatting_username_is_ellipsis__5DqoB" style="margin-right: 4px">
+                                                        <span class="live_chatting_username_wrapper__iJpJB">
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/icon/6m.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <span class="live_chatting_username_nickname__dDbbj" style="color: rgb(231, 109, 83)">
+                                                            <span class="name_ellipsis__Hu9B+">
+                                                                <span class="name_text__yQG50"> 턱붕이4</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                                <span class="live_chatting_message_text__DyleH"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="live_chatting_list_item__0SGhw">
+                                        <div class="live_chatting_message_container__vrI-y">
+                                            <div class="live_chatting_message_chatting_message__7TKns">
+                                                <button type="button" class="live_chatting_message_nickname__UdLXa" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="live_chatting_username_container__m1-i5 live_chatting_username_is_message__jvTvP live_chatting_username_is_ellipsis__5DqoB live_chatting_username_has_gradient__zFzFH" style="margin-right: 4px">
+                                                        <span class="live_chatting_username_wrapper__iJpJB">
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/icon/3m.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/icon/cheese02.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/badge/gift_sub_1.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <span class="live_chatting_username_nickname__dDbbj" style="background-image: linear-gradient(to right, rgb(243, 230, 89), rgb(254, 122, 134)); color: rgb(243, 230, 89)">
+                                                            <span class="name_ellipsis__Hu9B+">
+                                                                <span class="name_text__yQG50"> 턱붕이3</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                                <span class="live_chatting_message_text__DyleH"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="live_chatting_list_item__0SGhw">
+                                        <div class="live_chatting_message_container__vrI-y">
+                                            <div class="live_chatting_message_chatting_message__7TKns">
+                                                <button type="button" class="live_chatting_message_nickname__UdLXa" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="live_chatting_username_container__m1-i5 live_chatting_username_is_message__jvTvP live_chatting_username_is_ellipsis__5DqoB" style="margin-right: 4px">
+                                                        <span class="live_chatting_username_wrapper__iJpJB">
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/icon/2m.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/badge/recap_2024.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/icon/cheese01.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <span class="live_chatting_username_nickname__dDbbj" style="color: rgb(175, 113, 181)">
+                                                            <span class="name_ellipsis__Hu9B+">
+                                                                <span class="name_text__yQG50"> 턱붕이2</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                                <span class="live_chatting_message_text__DyleH"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="live_chatting_list_item__0SGhw">
+                                        <div class="live_chatting_message_container__vrI-y">
+                                            <div class="live_chatting_message_chatting_message__7TKns">
+                                                <button type="button" class="live_chatting_message_nickname__UdLXa" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="live_chatting_username_container__m1-i5 live_chatting_username_is_message__jvTvP live_chatting_username_is_ellipsis__5DqoB" style="margin-right: 4px">
+                                                        <span class="live_chatting_username_wrapper__iJpJB">
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/icon/1m.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                            <span class="live_chatting_username_icon__6Dj7b">
+                                                                <span class="badge_container__a64XB">
+                                                                    <img src="https://ssl.pstatic.net/static/nng/glive/icon/cheese01.png" alt="" width="18" height="18" />
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                        <span class="live_chatting_username_nickname__dDbbj" style="color: rgb(191, 222, 115)">
+                                                            <span class="name_ellipsis__Hu9B+">
+                                                                <span class="name_text__yQG50"> 턱붕이1</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                                <span class="live_chatting_message_text__DyleH"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="live_chatting_list_item__0SGhw live_chatting_list_big_padding__iG-3T">
+                                        <div class="live_chatting_guide_container__vr6hZ live_chatting_guide_filter__BJDve">
+                                            <div class="live_chatting_guide_inner__TK3wg">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none" class="live_chatting_guide_icon__HX2cT" aria-hidden="true">
+                                                    <g filter="url(#a)">
+                                                        <path fill="currentColor" fill-rule="evenodd" d="M10.25 2.802c-.664.445-1.46.815-2.368 1.113-1.08.354-2.249.584-3.42.712-.308.033-.6.058-.87.075l-.56.025-.115.002A.917.917 0 0 0 2 5.645v3.07c0 .544.47.968 1.01.913 2.612-.266 4.725.014 6.389.67.319.126.602.257.851.388V2.802Zm1.375 8.872c.578.34 1.375-.06 1.375-.796V2.417c0-.74-.8-1.134-1.375-.797v10.054Z" clip-rule="evenodd"></path>
+                                                        <rect width="3.8" height="4.758" x="4.1" y="7.6" stroke="currentColor" stroke-width="1.2" rx="1.9"></rect>
+                                                    </g>
+                                                    <defs>
+                                                        <filter id="a" width="13" height="13.46" x="1" y="1.498" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                                                            <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                                                            <fecolormatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></fecolormatrix>
+                                                            <feoffset dy="1"></feoffset>
+                                                            <fegaussianblur stdDeviation="0.5"></fegaussianblur>
+                                                            <fecolormatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.01 0"></fecolormatrix>
+                                                            <feblend in2="BackgroundImageFix" result="effect1_dropShadow_1359_39595"></feblend>
+                                                            <feblend in="SourceGraphic" in2="effect1_dropShadow_1359_39595" result="shape"></feblend>
+                                                        </filter>
+                                                    </defs>
+                                                </svg>
+                                                <span class="blind"> 공지</span>
+                                                <p>쾌적한 시청 환경을 위해 일부 메시지는 필터링 됩니다. 클린 라이브 채팅 문화 만들기에 동참해 주세요.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="live_chatting_list_item__0SGhw live_chatting_list_big_padding__iG-3T">
+                                        <div class="live_chatting_guide_container__vr6hZ live_chatting_guide_welcome__o8iup">채팅방에 오신 것을 환영합니다!</div>
+                                    </div>
+                                </div>
+                                <div class="live_chatting_list_layer__g-bDc live_chatting_list_is_popup_chat__TSjkm" style="max-height: calc(-206px + 100vh)"></div>
+                            </div>
+                            <div class="live_chatting_area__hUPJw">
+                                <div class="live_chatting_input_container__qA0ad">
+                                    <button class="button_container__ppWwB button_icon_container__9CFZ1 button_small__6SNPZ live_chatting_input_setting_button__u9WRl" type="button" aria-haspopup="true" aria-expanded="false" style="border-radius: 5px">
+                                        <svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <mask id="mask0_36135_135211" maskUnits="userSpaceOnUse" x="0" y="0" width="18" height="19" style="mask-type: alpha">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.00244 6.92078C7.5106 6.92078 6.30122 8.13015 6.30122 9.62198C6.30122 11.1138 7.5106 12.3232 9.00244 12.3232C10.4943 12.3232 11.7037 11.1138 11.7037 9.62198C11.7037 8.13015 10.4943 6.92078 9.00244 6.92078ZM7.42623 9.62198C7.42623 8.75147 8.13192 8.04578 9.00244 8.04578C9.87296 8.04578 10.5787 8.75147 10.5787 9.62198C10.5787 10.4925 9.87296 11.1982 9.00244 11.1982C8.13192 11.1982 7.42623 10.4925 7.42623 9.62198Z" fill="currentColor"></path>
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M8.06434 17.0302C8.37934 17.0677 8.69434 17.0902 9.00184 17.0902L8.98684 17.0827C9.29435 17.0827 9.60935 17.0602 9.92435 17.0227C10.7494 16.9252 11.4019 16.3177 11.5594 15.5152L11.6794 14.9152C11.9044 14.8027 12.1294 14.6752 12.3469 14.5402L12.3769 14.5252L13.0069 14.7427C13.7794 15.0052 14.6269 14.7502 15.1294 14.1052C15.4969 13.6177 15.8119 13.0927 16.0594 12.5377C16.0669 12.5377 16.0669 12.5227 16.0669 12.5227C16.3894 11.7652 16.1794 10.8727 15.5419 10.3402L15.0694 9.95024C15.0844 9.82274 15.0844 9.71024 15.0844 9.59024C15.0844 9.53024 15.0825 9.47024 15.0807 9.41024C15.0788 9.35024 15.0769 9.29024 15.0769 9.23024L15.5494 8.84024C16.1869 8.30774 16.4044 7.40024 16.0669 6.64274C15.8269 6.08774 15.5119 5.56274 15.1369 5.07524C14.6419 4.43774 13.7869 4.17524 13.0144 4.43774L12.3769 4.64774C12.1594 4.50524 11.9269 4.37024 11.6869 4.25774L11.5744 3.65774C11.4169 2.85524 10.7569 2.24774 9.93935 2.15024C9.30935 2.07524 8.69434 2.07524 8.06434 2.15024C7.24683 2.24774 6.59432 2.85524 6.43682 3.65774L6.31682 4.25774C6.07682 4.37024 5.84431 4.50524 5.61931 4.64774L4.98931 4.43024C4.2168 4.16774 3.36929 4.42274 2.86679 5.06774C2.49178 5.54774 2.17678 6.07274 1.92928 6.63524C1.59177 7.41524 1.80178 8.29274 2.45428 8.84774L2.92679 9.24524C2.91929 9.36524 2.91929 9.48524 2.91929 9.60524C2.91929 9.67098 2.92128 9.73474 2.92321 9.79649C2.92503 9.8545 2.92679 9.91075 2.92679 9.96524L2.45428 10.3552C1.81678 10.8877 1.59927 11.7952 1.93678 12.5527C2.17678 13.1077 2.49178 13.6327 2.86679 14.1202C3.36179 14.7577 4.2168 15.0202 4.98931 14.7577L5.61931 14.5402H5.63431C5.84431 14.6752 6.07682 14.8102 6.31682 14.9227L6.43682 15.5227C6.58682 16.3252 7.24683 16.9327 8.06434 17.0302ZM6.21182 13.5727H6.20432V13.5577C5.91931 13.3852 5.57431 13.3477 5.25931 13.4527L4.6293 13.6702C4.3068 13.7752 3.9543 13.6702 3.75179 13.4077C3.42929 12.9952 3.16679 12.5527 2.95679 12.0802C2.82178 11.7727 2.90429 11.4202 3.16679 11.2027L3.63929 10.8127C3.9168 10.5877 4.0668 10.2352 4.0443 9.88274V9.59024C4.0443 9.54149 4.04617 9.49274 4.04805 9.44399C4.04992 9.39524 4.0518 9.34649 4.0518 9.29774C4.0743 8.94524 3.9168 8.59274 3.64679 8.36774L3.17429 7.97024C2.91179 7.75274 2.82928 7.39274 2.96429 7.08524C3.17429 6.61274 3.44429 6.17024 3.75929 5.75774C3.9693 5.49524 4.3218 5.39024 4.6368 5.49524L5.26681 5.71274C5.58931 5.81774 5.94181 5.78024 6.24182 5.58524C6.42932 5.46524 6.61682 5.36024 6.81182 5.26274C7.12683 5.11274 7.35933 4.81274 7.42683 4.46774L7.54683 3.86774C7.61433 3.54524 7.87683 3.30524 8.21434 3.26024C8.75434 3.19274 9.27185 3.19274 9.81185 3.26024C10.1494 3.29774 10.4194 3.54524 10.4794 3.86774L10.5994 4.46774C10.6669 4.81274 10.8994 5.11274 11.2144 5.26274C11.4094 5.35274 11.5969 5.45774 11.7919 5.58524C12.0769 5.77274 12.4369 5.81774 12.7594 5.70524L13.3894 5.48774C13.7119 5.38274 14.0644 5.48774 14.2669 5.75024C14.5894 6.15524 14.8519 6.60524 15.0619 7.07774C15.1969 7.38524 15.1144 7.73774 14.8519 7.95524L14.3794 8.34524C14.1019 8.57024 13.9519 8.92274 13.9744 9.27524C13.9819 9.37274 13.9819 9.47024 13.9819 9.56774C13.9819 9.61101 13.9784 9.65601 13.9748 9.70274C13.9709 9.75322 13.9669 9.80572 13.9669 9.86024C13.9519 10.2127 14.1019 10.5652 14.3719 10.7902L14.8444 11.1877C15.1069 11.4052 15.1894 11.7577 15.0544 12.0727C14.8444 12.5452 14.5744 12.9952 14.2594 13.4002C14.0494 13.6627 13.6969 13.7677 13.3819 13.6627L12.7519 13.4527C12.4219 13.3402 12.0769 13.3852 11.7694 13.5802C11.5894 13.6927 11.4019 13.8052 11.2069 13.8952C10.8919 14.0452 10.6594 14.3452 10.5919 14.6902L10.4719 15.2902C10.4044 15.6127 10.1419 15.8527 9.80435 15.8977C9.27185 15.9652 8.73934 15.9652 8.20684 15.8977C7.86933 15.8602 7.59933 15.6127 7.53933 15.2902L7.41933 14.6977C7.35183 14.3527 7.11933 14.0527 6.80432 13.9027C6.60932 13.8127 6.41432 13.7077 6.27932 13.6177L6.21182 13.5727Z"
+                                                    fill="currentColor"
+                                                ></path>
+                                            </mask>
+                                            <g mask="url(#mask0_36135_135211)">
+                                                <rect y="0.593994" width="17.9998" height="18" fill="currentColor"></rect>
+                                            </g>
+                                        </svg>
+                                        <span class="blind"> 내 사용중인 프로필 팝업</span>
+                                    </button>
+                                    <textarea class="live_chatting_input_input__2F3Et live_chatting_input_default__HjSyH" placeholder="채팅을 입력해주세요." style="height: 40px !important"> </textarea>
+                                    <button class="button_container__ppWwB button_only_icon__kahz5 button_large__oOJou live_chatting_input_input_button__sjwrf" type="button" aria-haspopup="true" aria-expanded="false">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.8364 9.92596C12.0708 10.1887 12.0479 10.5917 11.7852 10.8261C10.3836 12.0768 8.96128 12.0949 7.90323 11.7698C7.38962 11.612 6.97009 11.3774 6.68068 11.1851C6.53497 11.0882 6.41941 11.0001 6.33831 10.9345C6.29769 10.9016 6.2655 10.8741 6.24227 10.8538L6.19974 10.8155C5.94287 10.5747 5.92982 10.1713 6.1706 9.91443C6.41079 9.65819 6.81283 9.64457 7.06979 9.88351L7.14061 9.94353C7.19498 9.98756 7.27836 10.0514 7.38651 10.1232C7.60482 10.2684 7.91267 10.4388 8.27773 10.551C8.97703 10.7659 9.91726 10.784 10.9363 9.87474C11.199 9.64033 11.602 9.66326 11.8364 9.92596Z" fill="currentColor"></path>
+                                            <path d="M6.63572 7.24625C6.63572 6.91009 6.90823 6.63757 7.2444 6.63757H7.37704C7.71321 6.63757 7.98572 6.91009 7.98572 7.24625V8.05389C7.98572 8.39006 7.71321 8.66257 7.37704 8.66257H7.2444C6.90823 8.66257 6.63572 8.39006 6.63572 8.05389V7.24625Z" fill="currentColor"></path>
+                                            <path d="M10.0106 7.24625C10.0106 6.91009 10.2832 6.63757 10.6193 6.63757H10.752C11.0881 6.63757 11.3607 6.91009 11.3607 7.24625V8.05389C11.3607 8.39006 11.0881 8.66257 10.752 8.66257H10.6193C10.2832 8.66257 10.0106 8.39006 10.0106 8.05389V7.24625Z" fill="currentColor"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.99857 16.5C13.1407 16.5 16.4986 13.1421 16.4986 9C16.4986 4.85786 13.1407 1.5 8.99857 1.5C4.85641 1.5 1.49854 4.85786 1.49854 9C1.49854 13.1421 4.85641 16.5 8.99857 16.5ZM8.99857 15.225C12.4366 15.225 15.2236 12.438 15.2236 9C15.2236 5.56204 12.4366 2.775 8.99857 2.775C5.56056 2.775 2.77353 5.56204 2.77353 9C2.77353 12.438 5.56056 15.225 8.99857 15.225Z" fill="currentColor"></path>
+                                        </svg>
+                                        <span class="blind"> 이모티콘</span>
+                                    </button>
+                                </div>
+                                <div class="live_chatting_input_tools__OPA1R">
+                                    <div class="live_chatting_input_donation__-Vqe+">
+                                        <button type="button" class="live_chatting_input_donaiton_text__9ZR8A">
+                                            <svg width="23" height="23" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <mask id="mask0_28916_74626" maskUnits="userSpaceOnUse" x="3" y="3" width="25" height="24" style="mask-type: alpha">
+                                                    <path d="M23.779 12.5637L18.9765 6.57735C18.8628 6.43561 18.6949 6.34752 18.5134 6.33808C18.1514 6.31924 17.7869 6.31006 17.42 6.31006C13.4836 6.31006 9.80275 7.40045 6.66126 9.2945L23.779 12.5637ZM16.2359 7.67744C17.2395 7.67744 18.052 8.0305 18.052 8.46549C18.052 8.90048 17.2386 9.25354 16.2359 9.25354C15.2333 9.25354 14.4189 8.90048 14.4189 8.46549C14.4189 8.0305 15.2323 7.67744 16.2359 7.67744Z" fill="currentColor"></path>
+                                                    <path d="M11.4745 12.2175C11.4667 12.3238 11.4404 12.433 11.3945 12.5432C11.1039 13.2435 10.0535 13.6122 9.25467 13.3176C8.54269 13.0553 8.13501 12.4632 8.18767 11.8517C8.19548 11.7649 8.21303 11.6811 8.24132 11.6001L5.4051 11.0578C5.34658 12.0507 5.26953 13.6502 5.26953 15.1951C5.26953 16.7528 5.32439 18.2986 5.43339 19.8289C5.45415 20.1204 5.66944 20.3603 5.95646 20.4151L10.2514 21.2349C10.3654 21.2566 10.469 21.1626 10.4923 21.0489C10.6279 20.3964 11.535 20.0336 12.5181 20.2384C13.5002 20.4432 14.1868 21.1386 14.0513 21.7911C14.0335 21.8754 14.0804 21.9665 14.165 21.9826L23.9577 23.853C24.3575 23.9294 24.728 23.623 24.728 23.2159V14.7484L11.4745 12.2175ZM22.2907 18.9354C21.9738 19.8024 20.897 20.1506 19.8807 19.7098C18.8586 19.267 18.2851 18.1942 18.606 17.3174C18.9269 16.4406 20.0183 16.0992 21.0365 16.5517C22.0489 17.0023 22.6087 18.0683 22.2907 18.9354Z" fill="currentColor"></path>
+                                                </mask>
+                                                <g mask="url(#mask0_28916_74626)">
+                                                    <rect x="3" y="3" width="23.9998" height="24" fill="currentColor"></rect>
+                                                </g>
+                                            </svg>
+                                            후원하기
+                                        </button>
+                                        <div class="live_chatting_input_action__SfGhd">
+                                            <button class="button_container__ppWwB button_only_icon__kahz5 live_chatting_input_donation_button__6RJvH" type="button" aria-haspopup="true" aria-expanded="false" style="width: 28px; height: 28px">
+                                                <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2 5.99985C9.67714 5.99985 5.19999 10.477 5.19999 15.9999C5.19999 21.5227 9.67714 25.9999 15.2 25.9999H25.1029L23.0308 23.9277C22.5952 23.4921 22.5602 22.7973 22.9499 22.3202C24.3569 20.5971 25.2 18.3986 25.2 15.9999C25.2 10.477 20.7228 5.99985 15.2 5.99985ZM2.79999 15.9999C2.79999 9.15152 8.35166 3.59985 15.2 3.59985C22.0483 3.59985 27.6 9.15152 27.6 15.9999C27.6 18.5802 26.8107 20.9787 25.4611 22.9639L28.8485 26.3513C29.1917 26.6945 29.2944 27.2107 29.1086 27.6591C28.9229 28.1075 28.4853 28.3999 28 28.3999H15.2C8.35166 28.3999 2.79999 22.8482 2.79999 15.9999Z" fill="currentColor"></path>
+                                                    <path d="M12.324 19.5845C12.9727 20.0154 13.8146 20.2751 14.5552 20.3646V21.0511C14.5552 21.4647 14.8904 21.7999 15.304 21.7999C15.7176 21.7999 16.0528 21.4647 16.0528 21.0511V20.3235C16.6873 20.2137 17.2169 19.9883 17.624 19.6632C18.2227 19.1851 18.5392 18.5048 18.5392 17.7135C18.5392 16.9688 18.2325 16.4348 17.7791 16.0409C17.3345 15.6547 16.7514 15.4048 16.1946 15.2054C15.999 15.1353 15.8088 15.072 15.6272 15.0116C15.2765 14.8948 14.9574 14.7886 14.6911 14.6642C14.2806 14.4725 14.1152 14.29 14.1152 14.0735C14.1152 13.8257 14.2204 13.6534 14.4121 13.5331C14.6153 13.4057 14.9255 13.3327 15.3264 13.3327C15.8441 13.3327 16.3244 13.477 16.7878 13.7549C17.1644 13.9808 17.6859 13.957 17.9933 13.5915C18.2862 13.2431 18.267 12.6972 17.8722 12.4134C17.3607 12.0459 16.7767 11.768 16.0528 11.6504V10.9487C16.0528 10.5352 15.7176 10.1999 15.304 10.1999C14.8904 10.1999 14.5552 10.5352 14.5552 10.9487V11.6407C13.9442 11.7347 13.418 11.9545 13.0117 12.2862C12.4527 12.7426 12.136 13.3994 12.136 14.1855C12.136 14.9179 12.4441 15.4422 12.8973 15.8297C13.3414 16.2096 13.924 16.4578 14.4797 16.6597C14.6531 16.7227 14.8225 16.7808 14.9855 16.8367C15.3596 16.9651 15.7004 17.082 15.9802 17.2203C16.3851 17.4203 16.56 17.6168 16.56 17.8591C16.56 18.1203 16.4623 18.3026 16.2554 18.4313C16.0322 18.57 15.6654 18.6559 15.1136 18.6559C14.5576 18.6559 13.9908 18.517 13.474 18.2277C13.0461 17.9882 12.4404 18.0384 12.1407 18.4924C11.9149 18.8346 11.9425 19.3311 12.324 19.5845Z" fill="currentColor" stroke="currentColor" stroke-width="0.4"></path>
+                                                </svg>
+                                            </button>
+                                            <button class="button_container__ppWwB button_only_icon__kahz5 live_chatting_input_donation_button__6RJvH" type="button" aria-haspopup="true" aria-expanded="false" style="width: 28px; height: 28px">
+                                                <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M27.2 15.9998C27.2 22.1854 22.1856 27.1998 16 27.1998C9.8144 27.1998 4.79999 22.1854 4.79999 15.9998C4.79999 9.81422 9.8144 4.7998 16 4.7998" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"></path>
+                                                    <path d="M22.4 16.0001C22.4 19.5347 19.5346 22.4001 16 22.4001C12.4654 22.4001 9.59998 19.5347 9.59998 16.0001C9.59998 12.4655 12.4654 9.6001 16 9.6001" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"></path>
+                                                    <path d="M15.53 14.3737C15.0736 14.8542 15.093 15.6137 15.5735 16.0702C16.054 16.5267 16.8136 16.5072 17.27 16.0267L15.53 14.3737ZM17.27 16.0267L24.87 8.02669L23.13 6.3737L15.53 14.3737L17.27 16.0267Z" fill="currentColor"></path>
+                                                    <path d="M20.4938 5.99561L21.6959 9.60157C21.7437 9.74492 21.8561 9.8574 21.9995 9.90516L25.6043 11.1063C25.7768 11.1638 25.9669 11.1189 26.0955 10.9903L29.3212 7.76453C29.6009 7.48482 29.4412 7.00585 29.0496 6.94994L25.5564 6.45118C25.3452 6.42103 25.1793 6.25508 25.1491 6.04388L24.6501 2.55042C24.5941 2.15886 24.1152 1.9992 23.8355 2.27888L20.6098 5.50439C20.4812 5.63295 20.4363 5.82312 20.4938 5.99561Z" fill="currentColor"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <button class="button_container__ppWwB button_primary__b63Y7 button_solid__ZZe8g button_small__6SNPZ button_font_bold__qEQfU live_chatting_input_send_button__8KBrn" id="send_chat_or_donate" type="button">채팅</button>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div id="portal"></div>
+        <script id="scriptHolder"></script>
+        <textarea tabindex="-1" aria-hidden="true" style="min-height: 0px !important; max-height: none !important; height: 0px !important; visibility: hidden !important; overflow: hidden !important; position: absolute !important; z-index: -1000 !important; top: 0px !important; right: 0px !important; border-width: 0px; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, Helvetica, Arial, NanumGothic, 나눔고딕, &quot;Malgun Gothic&quot;, &quot;맑은 고딕&quot;, Dotum, 굴림, gulim, 새굴림, &quot;noto sans&quot;, 돋움, sans-serif; font-size: 14px; font-style: normal; font-weight: 400; letter-spacing: normal; line-height: 20px; padding: 10px 0px; tab-size: 8; text-indent: 0px; text-rendering: auto; text-transform: none; width: 281px; word-break: normal"> </textarea>
+    </body>
+</html>
